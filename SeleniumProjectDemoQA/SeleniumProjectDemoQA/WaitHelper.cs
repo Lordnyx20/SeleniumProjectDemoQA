@@ -26,14 +26,14 @@ namespace SeleniumProjectDemoQA.Helpers
             return wait.Until(ExpectedConditions.ElementIsVisible(locator));
         }
 
-        //public bool WaitUntilElementDisappears(By locator)
-        //{
-        //    return wait.Until(ExpectedConditions.InvisibilityOfElementLocated(locator));
-        //}
+        public bool WaitUntilElementDisappears(By locator)
+        {
+            return wait.Until(ExpectedConditions.InvisibilityOfElementLocated(locator));
+        }
 
-        //public bool WaitUntilTextPresent(By locator, string text)
-        //{
-        //    return wait.Until(ExpectedConditions.TextToBePresentInElementLocated(locator, text));
-        //}
+        public bool WaitUntilTextPresent(By locator, string text)
+        {
+            return wait.Until(ExpectedConditions.TextToBePresentInElementLocated(locator, text));
+        }
     }
 }
