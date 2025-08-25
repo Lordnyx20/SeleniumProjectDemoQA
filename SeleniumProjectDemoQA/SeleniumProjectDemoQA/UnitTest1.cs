@@ -58,23 +58,23 @@ namespace SeleniumProjectDemoQA
             var resultText2 = wait.WaitUntilElementVisible(By.ClassName("text-success")).Text;
             Assert.That(resultText2, Is.EqualTo("Impressive"), "Radio button selection result not displayed correctly.");
         }
-        //[Test]
-        //public void WebTables()
-        //{
-        //    driver.Navigate().GoToUrl("https://demoqa.com/");
-        //    driver.Manage().Window.Maximize();
-        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-        //    var elementsCard = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("addNewRecordButton")));
-        //    elementsCard.Click();
-        //    driver.FindElement(By.Id("firstName")).SendKeys("Andrew");
-        //    driver.FindElement(By.Id("lastName")).SendKeys("Abrenica");
-        //    driver.FindElement(By.Id("userEmail")).SendKeys("andrewabrenica@demoqa.com");
-        //    driver.FindElement(By.Id("age")).SendKeys("31");
-        //    driver.FindElement(By.Id("salary")).SendKeys("35,000");
-        //    driver.FindElement(By.Id("department")).SendKeys("QA");
-        //    Thread.Sleep(5000);
+        [Test]
+        public void WebTables()
+        {
+            driver.Navigate().GoToUrl("https://demoqa.com/");
+            driver.Manage().Window.Maximize();
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            var elementsCard = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("addNewRecordButton")));
+            elementsCard.Click();
+            driver.FindElement(By.Id("firstName")).SendKeys("Andrew");
+            driver.FindElement(By.Id("lastName")).SendKeys("Abrenica");
+            driver.FindElement(By.Id("userEmail")).SendKeys("andrewabrenica@demoqa.com");
+            driver.FindElement(By.Id("age")).SendKeys("31");
+            driver.FindElement(By.Id("salary")).SendKeys("35,000");
+            driver.FindElement(By.Id("department")).SendKeys("QA");
+            Thread.Sleep(5000);
 
-        //}
+        }
 
         [TearDown]
         public void Teardown()
